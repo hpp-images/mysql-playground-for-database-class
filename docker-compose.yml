@@ -3,8 +3,9 @@ version: "3"
 services:
   # MySQL
   db:
-    image: mysql:8.0.18
+    image: mysql:latest
     container_name: mysql_con
+    build: .
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: kadai
@@ -12,7 +13,6 @@ services:
       MYSQL_PASSWORD:
       TZ: "Asia/Tokyo"
       LANG: C.UTF-8
-      LANGUAGE: en_US
     volumes:
       - ./data:/var/lib/mysql
       - ./my.cnf:/etc/mysql/conf.d/my.cnf
@@ -32,3 +32,11 @@ services:
       - PMA_PASSWORD=root
     ports:
       - 8080:80
+# version: "3"
+
+# services:
+#   db:
+#     image: mysql_playground
+#     container_name: mysql_con
+#     ports:
+#       - 3306:3306
