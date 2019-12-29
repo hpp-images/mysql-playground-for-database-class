@@ -4,25 +4,9 @@
 
 ## how to use
 
-0. **install `docker` and `docker-compose`**
-1. create `docker-compose.yml` file
-2. edit `docker-compose.yml` as bellow (reffer to the `example.docker-compose.yml`)
-
-```
-version: "3"
-
-services:
-  db:
-    image: hpprc/mysql_playground
-    container_name: mysql_con
-    ports:
-      - 3306:3306
-```
-
-3. run `docker-compose up -d`
-
-4. run `docker-compose exec db mysql -uroot -proot`
-
+0. install **`docker`** and **`docker-compose`**
+1. run `docker run --name mysql_con -p 3306:3306 hpprc/mysql_playground`
+2. run `docker exec -it mysql_con mysql -uroot -proot`
 
 ## how to use this repositry's config
 ```
