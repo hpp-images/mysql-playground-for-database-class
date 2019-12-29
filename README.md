@@ -2,8 +2,28 @@
 
 **すごくあそべる**
 
+## how to use
 
-## how to run
+1. create file `docker-compose.yml`
+2. edit `docker-compose.yml` as bellow(reffer to the example.docker-compose.yml)
+
+```
+version: "3"
+
+services:
+  db:
+    image: hpprc/mysql_playground
+    container_name: mysql_con
+    ports:
+      - 3306:3306
+```
+
+3. run `docker-compose up -d`
+
+4. run `docker-compose exec db mysql -uroot -proot`
+
+
+## how to use this repositry's config
 ```
 make
 ```
@@ -14,13 +34,19 @@ MySQLの`kadai`データベース内に課題用のデータを投入済み。�
 
 ## how to enter the mysql container
 ```
-docker exec -i -t mysql bash
+docker exec -i -t mysql_con bash
 ```
 
 ## how to enter the mysql in docker container directly
 ```
 docker exec -i -t mysql_con mysql -uroot -proot
 ```
+
+## how to use from Dockerhub
+```
+docker run --name mysql_con -p 3306:3306 mysql_playground
+```
+
 
 ## p.s.
 

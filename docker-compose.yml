@@ -32,11 +32,3 @@ services:
       - PMA_PASSWORD=root
     ports:
       - 8080:80
-# version: "3"
-
-# services:
-#   db:
-#     image: mysql_playground
-#     container_name: mysql_con
-#     ports:
-#       - 3306:3306
