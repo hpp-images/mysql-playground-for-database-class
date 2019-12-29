@@ -5,7 +5,7 @@
 ## how to use
 
 0. install **`docker`**
-1. run `docker run --name mysql_con -p 3306:3306 hpprc/mysql_playground`
+1. run `docker run -d --name mysql_con -p 3306:3306 hpprc/mysql_playground`
 1. run `docker exec -it mysql_con mysql -uroot -proot`
 
 ## how to use this repositry's config
