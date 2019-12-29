@@ -45,7 +45,7 @@ docker exec -i -t mysql_con mysql -uroot -proot
 
 ## how to use from Dockerhub
 ```
-docker run --name mysql_con -p 3306:3306 mysql_playground
+docker run --name mysql_con -p 3306:3306 hpprc/mysql_playground
 ```
 
 
