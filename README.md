@@ -6,7 +6,7 @@
 
 0. **install `docker` and `docker-compose`**
 1. create `docker-compose.yml` file
-2. edit `docker-compose.yml` as bellow (reffer to the example.docker-compose.yml)
+2. edit `docker-compose.yml` as bellow (reffer to the `example.docker-compose.yml`)
 
 ```
 version: "3"
