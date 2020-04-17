@@ -1,11 +1,11 @@
-# MySQL playground
+# MySQL playground for database class
 
 **すごくあそべる**
 
 ## how to use
 
 0. install **`docker`**
-1. run `docker run -d --name mysql_con -p 3306:3306 hpprc/mysql_playground`
+1. run `docker run -d --name mysql_con -p 3306:3306 hpprc/mysql_playground_for_database_class`
 1. run `docker exec -it mysql_con mysql -uroot -proot`
 
 ## how to use this repositry's config

@@ -1,8 +1,8 @@
-version: "3"
+version: '3'
 
 services:
   db:
-    image: hpprc/mysql_playground
+    image: hpprc/mysql_playground_for_database_class
     container_name: mysql_con
     ports:
       - 3306:3306
