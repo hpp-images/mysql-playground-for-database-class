@@ -2,33 +2,6 @@ version: "3"
 
 services:
   # MySQL
-  db:
-    image: mysql:latest
-    container_name: mysql_con
+  playground:
     build: .
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: kadai
-      MYSQL_USER:
-      MYSQL_PASSWORD:
-      TZ: "Asia/Tokyo"
-      LANG: C.UTF-8
-    volumes:
-      - ./data:/var/lib/mysql
-      - ./my.cnf:/etc/mysql/conf.d/my.cnf
-      - ./init:/docker-entrypoint-initdb.d
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
-    ports:
-      - 3306:3306
-
-  # phpMyAdmin
-  phpmyadmin:
-    container_name: phpmyadmin_con
-    image: phpmyadmin/phpmyadmin
-    environment:
-      - PMA_ARBITRARY=1
-      - PMA_HOSTS=mysql_host
-      - PMA_USER=root
-      - PMA_PASSWORD=root
-    ports:
-      - 8080:80
+    image: hpprc/mysql-playground-for-database-class
